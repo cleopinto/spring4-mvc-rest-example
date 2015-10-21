@@ -51,4 +51,9 @@ public class FootballPlayerController {
 	public Player create(@RequestBody Player player) {
 		return playerService.create(player);
 	}
+	
+	@RequestMapping(value = SportsURIConstants.DELETE_PLAYER, method = RequestMethod.DELETE)
+	public Player deletePlayer(@PathVariable String id) {
+		return playerService.delete(id);
+	}
 }
